@@ -1,3 +1,5 @@
+<p align="center"><img src="assets/banner.png" alt="One git push, one merge request: a terminal push of a Terraform file and a merge request with Azure Bicep and a monthly cost estimate."></p>
+
 ```
   ____            _   _____    ____  _
  |  _ \ _   _ ___| |_|_   _|__| __ )(_) ___ ___ _ __
