@@ -15,6 +15,13 @@
 
 # PushToBicep Architect
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](scripts)
+[![Dependencies: stdlib only](https://img.shields.io/badge/dependencies-stdlib%20only-brightgreen.svg)](scripts)
+[![Offline tests: 33 passing](https://img.shields.io/badge/offline%20tests-33%20passing-success.svg)](tests/test_local.py)
+[![GitLab Duo](https://img.shields.io/badge/GitLab-Duo%20Agent-FC6D26.svg?logo=gitlab&logoColor=white)](agent-config.yml)
+[![Azure Bicep](https://img.shields.io/badge/Azure-Bicep-0078D4.svg)](examples/generated_main.bicep)
+
 **One git push. One AI agent. One Merge Request with production-ready Azure Bicep and a monthly bill you can actually read.**
 
 ---
@@ -176,9 +183,11 @@ The goal: run the pipeline twice and get the same MR updated, not a stack trace.
 ### 1. Clone
 
 ```bash
-git clone https://gitlab.com/jkelleman/pushtobicep-architect.git
+git clone https://github.com/jkelleman/pushtobicep-architect.git
 cd pushtobicep-architect
 ```
+
+The pipeline runs on GitLab (`.gitlab-ci.yml`), so push the clone to a GitLab project to use it.
 
 ### 2. Set CI/CD Variables
 
@@ -243,6 +252,11 @@ This exercises every mapping path in the prompt and generates a comprehensive Bi
   │   ├── test_multitier_app.tf ········· Multi-tier AWS app (test input)
   │   └── test_Dockerfile ··············· Node.js container (test input)
   │
+  ├── tests/
+  │   ├── test_local.py ················· 33 offline checks (python tests/test_local.py)
+  │   └── test_e2e.py ··················· End-to-end run against a live GitLab project
+  │
+  ├── STATUS-REPORT.md ·················· Sprint status report
   ├── LICENSE ··························· MIT
   └── README.md
 ```
